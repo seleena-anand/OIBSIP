@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Calculator</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="calculator">
-        <input type="text" placeholder="0" id="output-screen" />
-        <button onclick="Clear()">AC</button>
-        <button onclick="factorial()">x!</button>
-        <button onclick="display('(')">(</button>
-        <button onclick="display(')')">)</button>
-        <button onclick="display('%')">%</button>
-        <button onclick="del()">CE</button>
-        <button onclick="sin()">sin</button>
-        <button onclick="pi()">π</button>
-        <button onclick="display('7')">7</button>
-        <button onclick="display('8')">8</button>
-        <button onclick="display('9')">9</button>
-        <button onclick="display('+')">+</button>
-        <button onclick="cos()">cos</button>
-        <button onclick="log()">log</button>
-        <button onclick="display('4')">4</button>
-        <button onclick="display('5')">5</button>
-        <button onclick="display('6')">6</button>
-        <button onclick="display('*')">*</button>
-        <button onclick="tan()">tan</button>
-        <button onclick="sqrt()">√</button>
-        <button onclick="display('1')">1</button>
-        <button onclick="display('2')">2</button>
-        <button onclick="display('3')">3</button>
-        <button onclick="display('-')">-</button>
-        <button onclick="e()">e</button>
-        <button onclick="pow()">x^y</button>
-        <button onclick="display('0')">0</button>
-        <button onclick="display('.')">.</button>
-        <button onclick="Calculate('=')" class="equal">=</button>
-        <button onclick="display('/')">/</button>
-      </div>
-    </div>
-    <script src="index.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Product Landing Page</title>
+</head>
+<body>
+ <nav>
+   <div class="logo">Brand Name</div>
+   <!-- toggle menu button -->
+   <span class="menubtn" onclick="openNav()">&#9776;</span>
+ 
+   <div class="navLinks">
+     <ul>
+       <li><a href="#">Home</a></li>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Services</a></li>
+       <li><a href="#">Contact</a></li>
+       <button type="button">Login</button>
+     </ul>
+   </div>
+ </nav>
+   <!-- responsive side navbar -->
+   <div class="sideNav" id="sidenav">
+     <a href="#" class="closeBtn" onclick="closeNav()"> &#10006;</a>
+     <a href="#">Home</a>
+     <a href="#">About</a>
+     <a href="#">Services</a>
+     <a href="#">Contact</a>
+     <a href="#"><button type="button">Login</button> </a>
+   </div>
+   
+   <!-- Header content with banner image -->
+   <div class="row">
+     <div class="column1">
+       <h1>Responsive Design</h1>
+       <p>Contact us for responsive web design to grow your business!</p>
+       <button>PURCHASE</button>
+     </div>
+     <div class="column2">
+       <img src="https://www.hmablogs.com/wp-content/uploads/2022/06/banner-img.png" alt="banner" width="500px">
+     </div>
+   </div>
+   
+   <!-- javascript to make side menu appear -->
+ <script>
+   function openNav() {
+     document.getElementById("sidenav").style.width = "50%";
+   }
+   function closeNav() {
+     document.getElementById("sidenav").style.width = "0%";
+   }
+ </script>
+ 
+</body>
 </html>
