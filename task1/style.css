@@ -1,63 +1,165 @@
 *{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #9fcdf0;
-    font-family: sans-serif;
-    outline: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.container{
-    height: 100vh;
+body {
+  background-image: linear-gradient(to right, rgba(200, 8,207, 0.75), rgba(28, 70, 184, 0.8)), url(https://www.hmablogs.com/wp-content/uploads/2022/06/background-1-scaled.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 5%;
+}
+nav .logo{
+  font-size: 30px;
+  font-weight: 700;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+}
+nav ul li{
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+nav ul li a{
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .navLinks button{
+  padding: 2px 20px;
+  border-radius: 10px;
+  color: blue;
+  font-size: 16px;
+  border-style: none;
+  font-weight: 700;
+  margin-left: 10px;
+}
+nav ul li:hover{
+  background-color: rgb(44, 1, 197);
+}
+nav .menubtn{
+  font-size: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+ 
+/* responsive navbar css */
+@media screen and (max-width: 600px) {
+  nav .menubtn{
     display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+  nav .navLinks{
+    display: none;
+  }
+  .sideNav {
+    display: block !important;
+  }
 }
-
-.calculator{
-    background-color: #ecf0f3;
-    padding: 15px;
-    border-radius: 30px;
-    box-shadow: inset 5px 5px 12px #ffffff,
-                      5px 5px 12px rgba(0,0,0,.16);
-    display: grid;
-    grid-template-columns: repeat(6,68px);
+ 
+.sideNav{
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  background-color: rgb(44, 1, 197);
+  overflow-x: hidden;
+  transition: 0.3s ease-in;
+  padding-top: 60px;
+  display: none;
 }
-
-input{
-    grid-column: span 6;
-    height: 70px;
-    width: 380px;
-    background-color: #ecf0f3;
-    box-shadow: inset -5px -5px 12px #ffffff,
-                      5px 5px 12px rgba(0,0,0,.16);
-    border: none;
-    border-radius: 15px;
-    color: rgb(70, 70, 70);
-    font-size: 50px;
-    text-align: end;
-    margin: auto;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    padding: 20px;
+ 
+.sideNav a{
+  padding: 8px 8px 8px 40px;
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  color: #d1d1d1;
+  transition: 0.3s;
+  text-decoration: none;
 }
-
-button{
-    height: 48px;
-    width: 48px;
-    background-color: #ecf0f3;
-    box-shadow: inset -5px -5px 12px #ffffff,
-                       5px 5px 12px rgba(0,0,0,.16);
-    border: none;
-    border-radius: 15px;
-    margin: 8px;
-    font-size: 16px;
+.sideNav a button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: blue;
+  font-size: 16px;
+  border-style: none;
+  font-weight: 700;
 }
-
-.equal{
-    width: px;
-    border-radius: 15px;
-    box-shadow: inset -5px -5px 12px #ffffff,
-                       5px 5px 12px rgba(0,0,0,.16);
-
+.sideNav a:hover{
+  color: white;
+}
+.sideNav .closeBtn{
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+ 
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2% 5%;
+}
+.row .column1 {
+  padding-right: 50px;
+}
+.column1 h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.column1 p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.column1 button {
+  width: 150px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border-style: none;
+  color: blue;
+  font-size: 17px;
+  font-weight: 600;
+}
+/* Header content responsive */
+@media screen and (max-width: 980px) {
+  .column2 img {
+    width: 350px;
+  }
+  .column1 h1 {
+    font-size: 40px;
+  }
+  .column1 p{
+    font-size: 17px;
+  }
+  .row {
+    margin-top: 80px;
+  }
+}
+ 
+@media screen and (max-width: 600px) {
+ 
+  .column1 h1 {
+    font-size: 35px;
+  }
+  .row {
+    flex-direction: column;
+ 
+  }
+  .row .column1 {
+    padding: 30px;
+  }
 }
